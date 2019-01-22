@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 class LINQWithArrayOfObjects
@@ -15,8 +15,10 @@ class LINQWithArrayOfObjects
             new Employee("Wendy", "Brown", 4236.4M)
         };
 
+        Console.WriteLine();
+
         //display all employees
-        foreach(var element in employees)
+        foreach (var element in employees)
         {
             Console.WriteLine(element);
         }
@@ -72,6 +74,9 @@ class LINQWithArrayOfObjects
         }
 
         Console.WriteLine();
+
+        employees = null;
     }
 }
+
 
