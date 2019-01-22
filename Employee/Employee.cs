@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 class Employee
 {
+    public static int Count { get; private set; }
+
     public string FirstName { get; }
     public string LastName { get; }
     private decimal monthlySalary;
@@ -14,7 +16,10 @@ class Employee
     {
         FirstName = firstName;
         LastName = lastName;
+        ++Count;
         MonthlySalary = monthlySalary;
+        Console.WriteLine("Employee constructor: " +
+            $"{FirstName} {LastName}; Count = {Count}");
     }
 
     public decimal MonthlySalary
@@ -35,4 +40,6 @@ class Employee
     public override string ToString() =>
         $"{FirstName,-10} {LastName,-10} {MonthlySalary,10:C}";
 }
+
+
 
